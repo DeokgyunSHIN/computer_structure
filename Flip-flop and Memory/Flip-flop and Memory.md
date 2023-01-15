@@ -63,3 +63,39 @@ NOR2에서는 둘다 입력값이 0이기 때문에
  
 <img width="719" alt="스크린샷 2023-01-15 오후 4 34 27" src="https://user-images.githubusercontent.com/104719555/212528616-33a06757-df76-4da2-a2f5-ab2984cf7125.png">
 
+
+
+|S|R|Q|_Q|
+|:---:|:---:|:------:|:----:|
+|1|0|1|0|
+|0|1|0|1|
+|0|0|Q|_Q|
+|1|1|Disallowd|Disallowd|
+
+
+* 단 S와 R이 1인 상태는 피하도록 설계
+
+S에 신호를 주게 되면 Q가 1이 되고 
+
+R에 신호를 주게 되면 _Q가 1이 된다.
+
+S와 R에 둘다 신호를 주게 되면 회로 논리상 말이 안되기 떄문에 회로를 추가해주어야한다.(output 값이 둘다 0이기 때문)
+
+그래서 좀더 회로에 추가를 하면 
+
+Level-triggered filp-flop
+
+<img width="1091" alt="스크린샷 2023-01-15 오후 4 48 23" src="https://user-images.githubusercontent.com/104719555/212529047-d1ca775e-5ea1-41aa-9ccb-70f00a3264ba.png">
+
+위의 회로를 보면  R의 값과 S의 값이 1이든 0이든 
+
+Hold That Bit가 1이 되지 않는 이상 값은 변하지 않는다.
+
+왜냐하면 AND게이트이기 떄문이다.
+
+그러니 결국 Hold Taht Bit가 1이냐 0이냐에 따라서 진리표가 바뀌게 된다.
+
+### D플립픕롭
+
+<img width="879" alt="스크린샷 2023-01-15 오후 4 59 26" src="https://user-images.githubusercontent.com/104719555/212529367-81340f21-d034-45d4-b035-2d848d2ef88b.png">
+
